@@ -25,7 +25,7 @@
           <div class="demo-content bg-alt">
             <!-- Example friend list insertion -->
             <h3>Friend Tree</h3>
-            <tree :friendpath="friendpath"></tree>
+            <tree :friendpath="friendpath" ref="tree"></tree>
           </div>
         </div> 
          
@@ -81,6 +81,7 @@ export default {
   mounted() {
     this.$store.dispatch('getPosts')
     this.$store.dispatch('getUser')
+    console.log(this.$refs)
   },
 }
 </script>
